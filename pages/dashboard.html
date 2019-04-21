@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="../imagens/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Globo Rewards | Inicio</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Bootstrap core CSS     -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!--  Material Dashboard CSS    -->
+    <link href="../assets/css/material-dashboard.css?v=1.2.0" rel="stylesheet" />
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="../assets/css/demo.css" rel="stylesheet" />
+    <!--     Fonts and icons     -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons" rel='stylesheet'>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-3.jpg">
+            <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+            <div class="logo">
+                <a href="" class="simple-text">
+                    <img src="../imagens/logotype_globo_rewards.svg" width="130">
+                </a>
+            </div>
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+                    <li class="active">
+                        <a href="dashboard.html" style="background-color: #f3c704;">
+                            <i class="material-icons">dashboard</i>
+                            <p>Pagina inicial</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./maps.html">
+                            <i class="material-icons">whatshot</i>
+                            <p>Mapa de calor</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="api_toggle">                          
+                            <!-- <i class="material-icons">content_paste</i> -->
+                            <i class="material-icons">language</i>
+                            <p>Cadastros<i class="material-icons" style="float: right;"></i></p>
+                        </a>
+                    </li>
+                    <li id="api_public" style="display: none;">
+                        <a href="http://5b09dceba991440014aaffc8.mockapi.io/api/v1/publicUsers" target="_blank">                          
+                            <!-- <i class="material-icons">content_paste</i> -->                            
+                            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspProgramas <i class="material-icons" style="float: right;">public</i></p>
+
+                        </a>
+                    </li>  
+                    <li id="api" style="display: none;">
+                        <a href="http://5b09dceba991440014aaffc8.mockapi.io/api/v1/users" target="_blank">                          
+                            <!-- <i class="material-icons">content_paste</i> -->                            
+                            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAnúncios <i class="material-icons" style="float: right;">attach_money</i></p>
+                        </a>
+                    </li>    
+                    <li>
+                        <a href="users.html">
+                            <i class="material-icons">supervised_user_circle</i>
+                            <p>Usuarios</p>
+                        </a>
+                    </li>                     
+                    <li>
+                        <a href="config.html">
+                            <!-- <i class="material-icons">content_paste</i> -->
+                            <i class="material-icons">brightness_5</i>
+                            <p>Configurações</p>
+                        </a>
+                    </li>                    
+                    <li>
+                        <a href="responsive-login-form/index.html">
+                            <!-- <i class="material-icons">content_paste</i> -->
+                            <i class="material-icons">arrow_back</i>
+                            <p>Sair</p>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="main-panel">
+            <nav class="navbar navbar-transparent navbar-absolute">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"> Painel Administrativo </a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                            <form class="navbar-form navbar-right" role="search">
+                                <button type="button" class="btn btn-white btn-round btn-just-icon">
+                                    <i class="material-icons">public</i>
+                                    <div class="ripple-container"></div>
+                                </button>
+                                <div class="form-group  is-empty">
+                                        <label for="exampleFormControlSelect1">Programa</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>BBB</option>
+                                            <option>Mais Você</option>
+                                            <option>Malhação</option>
+                                        </select>
+                                </div>                            
+                            </form>    
+                            <form class="navbar-form navbar-right" role="search">
+                                <button type="button" class="btn btn-white btn-round btn-just-icon">
+                                    <i class="material-icons">calendar_today</i>
+                                    <div class="ripple-container"></div>
+                                </button>
+                                <div class="form-group  is-empty">
+                                    <input type="text" class="form-control" placeholder="21/04/2019">
+                                    <span class="material-input"></span>
+                                </div>                            
+                            </form>
+                            <form class="navbar-form navbar-right" role="search">
+                                <button type="button" class="btn btn-white btn-round btn-just-icon">
+                                    <i class="material-icons">calendar_today</i>
+                                    <div class="ripple-container"></div>
+                                </button>
+                                <div class="form-group  is-empty">
+                                    <input type="text" class="form-control" placeholder="21/04/2019">
+                                    <span class="material-input"></span>
+                                </div>                            
+                            </form>                      
+                        </div>
+                </div>
+            </nav>
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header" data-background-color="purple">
+                                    <i class="material-icons">directions_bike</i>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category">Acessos</p>
+                                    <h3 class="title">6.849
+                                        <small></small>
+                                    </h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats"><span class="text-success"><i class="fa fa-long-arrow-up"></i> 5% </span> aumento de acessos.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header" data-background-color="green">
+                                    <i class="material-icons">assignment_ind</i>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category">Novos Usuários</p>
+                                    <h3 class="title">2.699</h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <span class="text-success"><i class="fa fa-long-arrow-up"></i> 1% </span> aumento de cadastros. 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header" data-background-color="blue">
+                                    <i class="material-icons">work</i>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category">Check-Ins</p>
+                                    <h3 class="title">3.950</h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                            <span class="text-warning"><i class="fa fa-long-arrow-down"></i> -2% </span> de Check-Ins.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header" data-background-color="red">
+                                    <i class="material-icons">cancel</i>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category">Recusados</p>
+                                    <h3 class="title">245</h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        Não aderiram ao serviço
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header card-chart" data-background-color="green">
+                                        <div class="ct-chart" id="dailySalesChart"></div>
+                                    </div>
+                                    <div class="card-content">
+                                        <h4 class="title">Usuarios por dia</h4> <p class="pull-right" style="margin-right: 10px;"><a href="dashboard.html"><i class="material-icons" style="color: black;">refresh</a></i></p>
+                                        <p class="category">
+                                            <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> aumento de usuários.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="stats">
+                                            <i class="material-icons">access_time</i> Nos últimos 7 dias
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header card-chart" data-background-color="orange">
+                                        <div class="ct-chart" id="emailsSubscriptionChart"></div>
+                                    </div>
+                                    <div class="card-content">
+                                        <h4 class="title">Uso por mês</h4>
+                                        <span class="text-success"><i class="fa fa-long-arrow-up"></i> 75% </span> aumento de usuários. <p class="pull-right" style="margin-right: 10px;"><a href="dashboard.html"><i class="material-icons" style="color: black;">refresh</a></i></p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="stats">
+                                            <i class="material-icons">access_time</i> Nos últimos 12 meses
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header card-chart" data-background-color="red">
+                                        <div class="ct-chart" id="completedTasksChart"></div>
+                                    </div>
+                                    <div class="card-content">
+                                        <h4 class="title">Uso por hora</h4>
+                                        <span class="text-success"><i class="fa fa-long-arrow-up"></i> 95% </span> aumento de usuários. <p class="pull-right" style="margin-right: 10px;"><a href="dashboard.html"><i class="material-icons" style="color: black;">refresh</a></i></p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="stats">
+                                            <i class="material-icons">access_time</i> ultima atualização a 1 segundo
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header card-chart" data-background-color="green">
+                                    <div id="piechart1"></div>
+                                </div>
+                                <div class="card-content">
+                                    <h4 class="title">Período de Acesso</h4> <p class="pull-right" style="margin-right: 10px;"><a href="dashboard.html"><i class="material-icons" style="color: black;">refresh</a></i></p>
+                                    <p class="category">
+                                        <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> aumento de usuários no período noturno.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons">access_time</i> ultima atualização a 1 segundo
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header card-chart" data-background-color="green">
+                                    <div id="piechart2"></div>
+                                </div>
+                                <div class="card-content">
+                                    <h4 class="title">Sexo</h4> <p class="pull-right" style="margin-right: 10px;"><a href="dashboard.html"><i class="material-icons" style="color: black;">refresh</a></i></p>
+                                    <p class="category">
+                                        <span class="text-success"><i class="fa fa-long-arrow-up"></i> 12% </span> aumento de usuários do sexo feminino.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons">access_time</i> ultima atualização a 1 segundo
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header card-chart" data-background-color="green">
+                                    <div id="piechart3"></div>
+                                </div>
+                                <div class="card-content">
+                                    <h4 class="title">Idades</h4> <p class="pull-right" style="margin-right: 10px;"><a href="dashboard.html"><i class="material-icons" style="color: black;">refresh</a></i></p>
+                                    <p class="category">
+                                        <span class="text-success"><i class="fa fa-long-arrow-up"></i>5% </span> aumento de usuários na faixa de 50 a 60 anos.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons">access_time</i> ultima atualização a 1 segundo
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header card-chart" data-background-color="green">
+                                    <div id="piechart4"></div>
+                                </div>
+                                <div class="card-content">
+                                    <h4 class="title">Anunciantes</h4> <p class="pull-right" style="margin-right: 10px;"><a href="dashboard.html"><i class="material-icons" style="color: black;">refresh</a></i></p>
+                                    <p class="category">Acessos por Anunciantes</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons">access_time</i> ultima atualização a 1 segundo
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header card-chart" data-background-color="green">
+                                    <div id="piechart5"></div>
+                                </div>
+                                <div class="card-content">
+                                    <h4 class="title">Categorias</h4> <p class="pull-right" style="margin-right: 10px;"><a href="dashboard.html"><i class="material-icons" style="color: black;">refresh</a></i></p>
+                                    <p class="category">Acessos por Categorias</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons">access_time</i> ultima atualização a 1 segundo
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header card-chart" data-background-color="green">
+                                    <div id="piechart6"></div>
+                                </div>
+                                <div class="card-content">
+                                    <h4 class="title">Programas</h4> <p class="pull-right" style="margin-right: 10px;"><a href="dashboard.html"><i class="material-icons" style="color: black;">refresh</a></i></p>
+                                    <p class="category">Acessos por Programas</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons">access_time</i> ultima atualização a 1 segundo
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-header card-chart" data-background-color="green">
+                                        <div id="mapchart1"></div>
+                                    </div>
+                                    <div class="card-content">
+                                        <h4 class="title">Acessos por Estado</h4> <p class="pull-right" style="margin-right: 10px;"><a href="dashboard.html"><i class="material-icons" style="color: black;">refresh</a></i></p>
+                                        <p class="category">Acessos por Estado</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="stats">
+                                            <i class="material-icons">access_time</i> ultima atualização a 1 segundo
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                </div>
+            </div>
+
+             <div class="modal fade" id="msg" tabindex="-1" role="dialog" aria-labelledby="aprovar" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="reprovar">Enviar Mensagem push</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h4>Texto da mensagem:</h4>
+                            <div class="form-group label-floating">                                        
+                                <textarea  class="form-control materialize-textarea" placeholder="Ex: Parabens! ja somos mais de 120 ciclistas hoje!" required=""></textarea>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="go_to_table()" style="background-color: #ffa726;">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <footer class="footer">
+                <div class="container-fluid">
+                    <p class="copyright pull-right" style="margin-right: 20px;">
+                        &copy;
+                        <script>
+
+                            var me_color = ["rgb(15,15,15)","rgb(15,15,15)"];
+
+                            document.write(new Date().getFullYear())
+
+                            Highcharts.chart('container', {
+                                chart: {
+                                    plotBackgroundColor: null,
+                                    plotBorderWidth: 0,                                    
+                                    plotShadow: false,
+                                    fontFamily: 'Roboto',
+                                    marginBottom: -40                                    
+                                },
+                                title: {
+                                    text: 'Histórico de análises',
+                                    style: {
+                                        fontWeight: 'bold'
+                                    },
+                                    align: 'center',
+                                    verticalAlign: 'middle',
+                                    y: -70
+                                },
+                                exporting: { enabled: false },
+                                credits: {
+                                  enabled: false
+                                },
+                                tooltip: {
+                                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                },
+                                plotOptions: {
+                                    pie: {
+                                        dataLabels: {
+                                            enabled: false,
+                                            style: {                                                
+                                                color: me_color
+                                            }
+                                        },
+                                        startAngle: -90,
+                                        endAngle: 90,
+                                        center: ['50%', '75%']
+                                    }
+                                },
+
+                                series: [
+                                {
+                                    type: 'pie',
+                                    name: 'Viagens',
+                                    innerSize: '70%',
+                                    data: [{
+                                        name: 'Aceitas',
+                                        y: 90,
+                                        color: 'green' // Jane's color
+                                    },
+                                    {
+                                        name: 'Recusadas',
+                                        y: 10,
+                                        color: 'red' // Jane's color
+                                    }]                
+                                                                                                                                    
+                                }]
+                            });
+                        </script>
+                        <a href="#">Globo Rewards</a> 
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+<!--   Core JS Files   -->
+<script src="../assets/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../assets/js/material.min.js" type="text/javascript"></script>
+<!--  Charts Plugin -->
+<script src="../assets/js/chartist.min.js"></script>
+<!--  Dynamic Elements plugin -->
+<script src="../assets/js/arrive.min.js"></script>
+<!--  PerfectScrollbar Library -->
+<script src="../assets/js/perfect-scrollbar.jquery.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="../assets/js/bootstrap-notify.js"></script>
+<!-- Material Dashboard javascript methods -->
+<script src="../assets/js/material-dashboard.js?v=1.2.0"></script>
+<!-- Material Dashboard DEMO methods, don't include it in your project! -->
+<script src="../assets/js/demo.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        // Javascript method's body can be found in assets/js/demos.js
+        demo.initDashboardPageCharts();
+
+    });
+</script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart', 'geochart', 'table']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+    var data1 = google.visualization.arrayToDataTable([
+        ['Período', 'Volume de Acessos'],
+        ['Manhã',     1553],
+        ['Tarde',      880],
+        ['Noite',  3443]
+    ]);
+
+    var data2 = google.visualization.arrayToDataTable([
+        ['Sexo', 'Volume de Acessos'],
+        ['Masculino',     4996],
+        ['Feminino',      880]
+    ]);
+
+    var data3 = google.visualization.arrayToDataTable([
+        ['Idade', 'Volume de Acessos'],
+        ['16 a 18 anos',     112],
+        ['19 a 25 anos',      991],
+        ['26 a 35 anos',      445],
+        ['35 a 45 anos',      1223],
+        ['50 a 60 anos',      2331],
+        ['61+ anos',      631]
+    ]);
+
+    var data4 = google.visualization.arrayToDataTable([
+        ['Anunciante', 'Acessos'],
+        ['Itaú', 2355],
+        ['FIAT', 1358],
+        ['Rock in Rio', 895],
+        ['Cup Noodles', 233]
+      ]);
+
+      var data5 = google.visualization.arrayToDataTable([
+        ['Categoria', 'Acessos'],
+        ['Finanças', 2355],
+        ['Veículos', 1358],
+        ['Shows', 895],
+        ['Alimentação', 233]
+      ]);
+
+      var data6 = google.visualization.arrayToDataTable([
+        ['Programas', 'Acessos'],
+        ['BBB 2019', 4331],
+        ['Mais Você', 1221],
+        ['Jornal Nacional', 5776],
+        ['TV Globinho', 233]
+      ]);
+
+    var data7 = google.visualization.arrayToDataTable([
+        ['Estado', 'Acessos'],
+        ['São Paulo', 6400],
+        ['Minas Gerais', 4442],
+        ['Rio de Janeiro', 1233],
+        ['Bahia', 1554]
+    ]);
+
+    var options1 = {
+        title: 'Período',
+        is3D: true
+    };
+
+    var options2 = {
+        title: 'Sexo',
+        is3D: true
+    };
+
+    var options3 = {
+        title: 'Idades',
+        is3D: true
+    };
+
+    var options4 = {
+        title: 'Anunciantes',
+        is3D: true
+      };
+
+    var options5 = {
+        title: 'Categorias',
+        is3D: true
+    };     
+
+    var options6 = {
+        title: 'Programas',
+        is3D: true
+    };  
+
+    var chart1 = new google.visualization.PieChart(document.getElementById('piechart1'));
+    chart1.draw(data1, options1);
+
+    var chart2 = new google.visualization.PieChart(document.getElementById('piechart2'));
+    chart2.draw(data2, options2);
+
+    var chart3 = new google.visualization.PieChart(document.getElementById('piechart3'));
+    chart3.draw(data3, options3);
+
+    var chart4 = new google.visualization.PieChart(document.getElementById('piechart4'));
+    chart4.draw(data4, options4);
+
+    var chart5 = new google.visualization.PieChart(document.getElementById('piechart5'));
+    chart5.draw(data5, options5);
+
+    var chart6 = new google.visualization.PieChart(document.getElementById('piechart6'));
+    chart6.draw(data6, options6);
+
+    var geochart = new google.visualization.GeoChart(document.getElementById('mapchart1'));
+
+    var optionsMap = {
+        region: 'BR',
+        resolution: 'provinces'
+    };
+
+    geochart.draw(data7, optionsMap);
+
+    }
+</script>
+</html>
+
